@@ -1,4 +1,4 @@
-# missive-downloader
+# Missive-Downloader
 
 ## About the script
 [Missive](www.missiveapp.com) is a great email client that manages to tie together a collaborative inbox experience with the chat like functionality of Slack.
