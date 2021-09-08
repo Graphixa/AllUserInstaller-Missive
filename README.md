@@ -22,10 +22,10 @@ To install this script on your system, start by:
 
 * Creating a new folder in the root directory of "C:\" and call it "temp" - It should look like this "C:\temp" 
 * Next copy the installmissive.ps1 (powershell) script into this newly created folder at "C:\temp" 
-* Lastly copy the startup.bat file (or similar your own batch script) to the  startup folder for all users at "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp" - (You'll need to edit this batch script if you want to change where your powershell script is located).
-* At the next login, Windows will run the batch script which will call in the installmissive.ps1 powershell script.
+* Lastly copy the startup.bat file to the  startup folder for all users at "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp" - You'll need to edit this batch script if your system drive letter is not the default C:\ or you want to keep the powershell script in a different location on the drive
+* At the next login, Windows will run the batch script which will call in the installmissive.ps1 powershell script
 
 
 ### Option 2 - Group Policy
 
-Alternatively you can add the script through the Windows Group Policy Management Console (GPMC) or another group policy manager. I have tried this with limited success and option 1 tends to be more reliable (so long as no one deletes the powershell files from the disk.
+Alternatively you can add the script through the Windows Group Policy Management Console (GPMC) or another group policy manager. I have tried this with limited success and option 1 tends to be more reliable, so long as no one moves or deletes the powershell script from the disk.
