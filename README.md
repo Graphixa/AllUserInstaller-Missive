@@ -11,3 +11,21 @@ Missive on Windows specifically installs as a local application and won't instal
 * Following initial checks and download, the script will continue to install Missive silently for the current user.
 
 * Upon completion of the installation, the script will clean up any downloaded temporary files
+
+## How to isntall this script?
+
+# Option 1 - Windows Startup Folder
+
+Windows can't run powershell scripts from the Startup folder, so we need a batch script to run at startup to call in the powershell script
+
+To install this script on your system, start by:
+
+* Creating a new folder in the root directory of "C:\" and call it "temp" - It should look like this "C:\temp" 
+* Next copy the installmissive.ps1 (powershell) script into this newly created folder at "C:\temp" 
+* Lastly copy the startup.bat file (or similar your own batch script) to the  startup folder for all users at "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp" - (You'll need to edit this batch script if you want to change where your powershell script is located).
+* At the next login, Windows will run the batch script which will call in the installmissive.ps1 powershell script.
+
+
+# Option 2
+
+Alternatively you can add the script through the Windows Group Policy Management Console (GPMC) or another group policy manager. I have tried this with limited success and option 1 tends to be more reliable (so long as no one deletes the powershell files from the disk.
