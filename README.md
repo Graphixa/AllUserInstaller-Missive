@@ -2,7 +2,7 @@
 A powershell script to install Missive Email Client for all users on Windows 10 or 11. Useful for organisations or enterprise environments to quickly roll out Missive for all machines in their inventory.
 
 ## About Missive
-[Missive](www.missiveapp.com) is a great email client that manages to tie together a collaborative inbox experience with the chat like functionality of Slack.
+[Missive](https://www.missiveapp.com) is a great email client that manages to tie together a collaborative inbox experience with the chat like functionality of Slack.
 
 ![image](https://user-images.githubusercontent.com/2350960/209822715-f82c068e-c682-43b6-906a-68520f1b48b1.png)
 
