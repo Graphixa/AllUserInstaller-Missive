@@ -1,31 +1,33 @@
 # All User Installer for MissiveApp
 
-## About the script (Updated)
+## About Missive
 [Missive](www.missiveapp.com) is a great email client that manages to tie together a collaborative inbox experience with the chat like functionality of Slack.
 
 ## Why is this script important?
-Missive on Windows specifically installs as a local application and won't install for all users, which means in an enterprise or multi-user environment this can be frustrating to keep the latest version installed and available to users when they first login.
+On Microsoft Windows 10 & 11, the Missive desktop app installs as a local application for the current user, not for all users. This means in an enterprise or multi-user environment multiple users using the same machine will require Missive to be installed per user (not per machine. This can be frustrating to keep the latest version installed and available to all users, especially when they first login.
 
 * This powershell script will first check if Windows has Missive installed and if not it will download a .JSON file that contains the latest version information and current download links for [Missive](www.missiveapp.com)
 
-* Following initial checks and download, the script will continue to install Missive silently for the current user.
+* Following initial checks, the latest version of Missive for Windows will be downloaded to a temporary folder on the system.
 
-* Upon completion of the installation, the script will clean up any downloaded temporary files
+* The script will then install Missive silently using the /S argument and will force Missive to install to a local path accessible to all users using the /D="Install Path" argument. In the case of this script we use a generic 'Missive' folder located directly on the root of the system drive (i.e. C:\Missive\)
 
-## How to isntall this script?
+* Upon completion of the installation, (or script failure) the script will clean up any downloaded temporary files
 
-### Option 1 - Windows Startup Folder
+## How to run this script?
 
-Windows can't run powershell scripts from the Startup folder, so we need a batch script to run at startup to call in the powershell script
+To run this script on your system, you have a couple of options:
 
-To install this script on your system, start by:
+### Option 1 - Download from Github
+* Download the "installMissive-AllUsers.ps1" script from here (https://github.com/Graphixa/AllUserInstaller-Missive/)
+* Locate the downloaded script and right click the powershell script and run as administrator (there may be UAC prompts confirming the script is unknown).
+* If you aren't able to run the powershell script, try option 2 below.
 
-* Creating a new folder in the root directory of "C:\" and call it "temp" - It should look like this "C:\temp" 
-* Next copy the installmissive.ps1 (powershell) script into this newly created folder at "C:\temp" 
-* Lastly copy the startup.bat file to the  startup folder for all users at "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp" - You'll need to edit this batch script if your system drive letter is not the default C:\ or you want to keep the powershell script in a different location on the drive
-* At the next login, Windows will run the batch script which will call in the installmissive.ps1 powershell script
+### Option 2 - Copy the Raw Code into Your Own Powershell Script
+* Create a text document (.txt) on your system (doesn't matter where).
+* Copy the raw code from the "installMissive-AllUsers.ps1" script here (https://github.com/Graphixa/AllUserInstaller-Missive/)
+* Paste into your own text file and rename to "installMissive-AllUsers.ps1"
+* Right click the file and run as administrator, accepting any UAC prompts.
 
+By all means, feel free to fork this and improve this script!
 
-### Option 2 - Group Policy
-
-Alternatively you can add the script through the Windows Group Policy Management Console (GPMC) or another group policy manager. I have tried this with limited success and option 1 tends to be more reliable, so long as no one moves or deletes the powershell script from the disk.
