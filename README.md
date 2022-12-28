@@ -1,10 +1,14 @@
-# All User Installer for MissiveApp
+# Install Missive For All Users
+A powershell script to install Missive Email Client for all users on Windows 10 or 11. Useful for organisations or enterprise environments to quickly roll out Missive for all machines in their inventory.
 
 ## About Missive
 [Missive](www.missiveapp.com) is a great email client that manages to tie together a collaborative inbox experience with the chat like functionality of Slack.
 
+![image](https://user-images.githubusercontent.com/2350960/209822715-f82c068e-c682-43b6-906a-68520f1b48b1.png)
+
+
 ## Why is this script important?
-On Microsoft Windows 10 & 11, the Missive desktop app installs as a local application for the current user, not for all users. This means in an enterprise or multi-user environment multiple users using the same machine will require Missive to be installed per user (not per machine. This can be frustrating to keep the latest version installed and available to all users, especially when they first login.
+On Microsoft Windows 10 & 11, the Missive desktop app installs as a local application for the current user only, not for all users. This means in an enterprise or multi-user environment multiple users using the same machine will require Missive to be installed per user (not per machine. This can be frustrating to keep the latest version installed and available to all users, especially when they first login.
 
 * This powershell script will first check if Windows has Missive installed and if not it will download a .JSON file that contains the latest version information and current download links for [Missive](www.missiveapp.com)
 
