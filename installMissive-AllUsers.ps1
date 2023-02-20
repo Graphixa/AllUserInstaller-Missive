@@ -1,3 +1,5 @@
+Set-ExecutionPolicy Unrestricted
+
 $ProgressPreference = 'SilentlyContinue'
 
 $softwareName = 'Missive'
