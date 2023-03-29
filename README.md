@@ -29,14 +29,14 @@ To run this script on your system, you have a couple of options:
 irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/installMissive-AllUsers.ps1" | iex
 ```
 
-### Option 1 - Download .ps1 file from Github
+### Option 2 - Download .ps1 file from Github
 * Download the "installMissive-AllUsers.ps1" script from here (https://github.com/Graphixa/AllUserInstaller-Missive/)
 * Locate the downloaded script and right click the powershell script and run as administrator (there may be UAC prompts confirming the script is unknown).
 * If you aren't able to run the powershell script, try option 2 below.
 
-### Option 2 - Copy the Raw Code into Your Own Powershell Script
+### Option 3 - Copy the Raw Code into your own Powershell Script
 * Create a text document (.txt) on your system (doesn't matter where).
-* Copy the raw code from the "installMissive-AllUsers.ps1" script here (https://github.com/Graphixa/AllUserInstaller-Missive/)
+* Copy the raw code from the raw code from: (["installMissive-AllUsers.ps1"](https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/installMissive-AllUsers.ps1))
 * Paste into your own text file and rename to "installMissive-AllUsers.ps1"
 * Right click the file and run as administrator, accepting any UAC prompts.
 
