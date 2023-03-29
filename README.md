@@ -18,11 +18,18 @@ On Microsoft Windows 10 & 11, the Missive desktop app installs as a local applic
 
 * Upon completion of the installation, (or script failure) the script will clean up any downloaded temporary files
 
-## How to run this script?
+## How to install/run this script?
 
 To run this script on your system, you have a couple of options:
 
-### Option 1 - Download from Github
+### Option 1 - Run Command from Powershell
+* Open up an elevated terminal/powershell on your machine (must be running as administrator)
+* Run the following code:
+```powershell
+irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/installMissive-AllUsers.ps1" | iex
+```
+
+### Option 1 - Download .ps1 file from Github
 * Download the "installMissive-AllUsers.ps1" script from here (https://github.com/Graphixa/AllUserInstaller-Missive/)
 * Locate the downloaded script and right click the powershell script and run as administrator (there may be UAC prompts confirming the script is unknown).
 * If you aren't able to run the powershell script, try option 2 below.
