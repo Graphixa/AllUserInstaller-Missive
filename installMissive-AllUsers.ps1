@@ -32,7 +32,7 @@ $tempPath = "$env:SystemDrive\Temp"
 $missiveFile = "$tempPath\MissiveSetup.exe"
 
 # Function to remove Missive installer and temp files
-function Clean-TempFiles {
+function Remove-TempFiles {
     try {
         Write-Host "Cleaning up temporary files and folders..."
         if (Test-Path $missiveFile) { Remove-Item $missiveFile -Force }
@@ -65,7 +65,7 @@ try {
 } catch {
     Write-Host -BackgroundColor Red -ForegroundColor White " Error: Download failed "
     Write-Host $_.Exception.Message
-    Clean-TempFiles
+    Remove-TempFiles
     exit 1
 }
 
@@ -79,7 +79,7 @@ try {
 } catch {
     Write-Host -BackgroundColor Red -ForegroundColor White " Error: Installation failed "
     Write-Host $_.Exception.Message
-    Clean-TempFiles
+    Remove-TempFiles
     exit 1
 }
 
@@ -106,5 +106,5 @@ try {
 }
 
 # Cleanup
-Clean-TempFiles
+Remove-TempFiles
 Write-Host -ForegroundColor Green "Missive installation completed successfully!"
