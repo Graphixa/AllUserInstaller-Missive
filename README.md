@@ -25,31 +25,31 @@ To run this script on your system, you have a couple of options:
 * Open up an elevated terminal/PowerShell on your machine (must be running as administrator)
 * Run the following code:
 ```powershell
-irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/installMissive-AllUsers.ps1" | iex
+irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/InstallMissive-AllUsers.ps1" | iex
 ```
 
 ### Option 2 - Download .ps1 file from Github
-* Download the "installMissive-AllUsers.ps1" script from [this repository](https://github.com/Graphixa/AllUserInstaller-Missive/)
+* Download the "InstallMissive-AllUsers.ps1" script from [this repository](https://github.com/Graphixa/AllUserInstaller-Missive/)
 * Locate the downloaded script, right-click the PowerShell script and run as administrator (there may be UAC prompts confirming the script is unknown)
 * If you aren't able to run the PowerShell script, try option 3 below
 
 ### Option 3 - Copy the Raw Code into your own PowerShell Script
 * Create a text document (.txt) on your system
-* Copy the raw code from ["installMissive-AllUsers.ps1"](https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/installMissive-AllUsers.ps1)
-* Paste into your own text file and rename to "installMissive-AllUsers.ps1"
+* Copy the raw code from ["InstallMissive-AllUsers.ps1"](https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/InstallMissive-AllUsers.ps1)
+* Paste into your own text file and rename to "InstallMissive-AllUsers.ps1"
 * Right-click the file and run as administrator, accepting any UAC prompts
 
 
 ## Parameters
 The script accepts a single optional parameter:
 * `-InstallPath`: Specifies the installation path for Missive. Defaults to `C:\Missive\`
-
+  
 > [!IMPORTANT]  
 > Just make sure that all users on the system have access to the specified path or they won't be able to update the app when a new version is released
 
 Example:
 ```powershell
-irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/installMissive-AllUsers.ps1" -InstallPath "D:\Missive" | iex
+irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/InstallMissive-AllUsers.ps1" -InstallPath "D:\Missive" | iex
 ```
 
 
