@@ -25,18 +25,18 @@ To run this script on your system, you have a couple of options:
 * Open up an elevated terminal/PowerShell on your machine (must be running as administrator)
 * Run the following code:
 ```powershell
-irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/InstallMissive-AllUsers.ps1" | iex
+irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/Install-MissiveAllUsers.ps1" | iex
 ```
 
 ### Option 2 - Download .ps1 file from Github
-* Download the "InstallMissive-AllUsers.ps1" script from [this repository](https://github.com/Graphixa/AllUserInstaller-Missive/)
+* Download the "Install-MissiveAllUsers.ps1" script from [this repository](https://github.com/Graphixa/AllUserInstaller-Missive/)
 * Locate the downloaded script, right-click the PowerShell script and run as administrator (there may be UAC prompts confirming the script is unknown)
 * If you aren't able to run the PowerShell script, try option 3 below
 
 ### Option 3 - Copy the Raw Code into your own PowerShell Script
 * Create a text document (.txt) on your system
-* Copy the raw code from ["InstallMissive-AllUsers.ps1"](https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/InstallMissive-AllUsers.ps1)
-* Paste into your own text file and rename to "InstallMissive-AllUsers.ps1"
+* Copy the raw code from ["Install-MissiveAllUsers.ps1"](https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/Install-MissiveAllUsers.ps1)
+* Paste into your own text file and rename to "Install-MissiveAllUsers.ps1"
 * Right-click the file and run as administrator, accepting any UAC prompts
 
 
@@ -49,7 +49,7 @@ The script accepts a single optional parameter:
 
 Example:
 ```powershell
-irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/InstallMissive-AllUsers.ps1" -InstallPath "D:\Missive" | iex
+irm "https://raw.githubusercontent.com/Graphixa/AllUserInstaller-Missive/main/Install-MissiveAllUsers.ps1" -InstallPath "D:\Missive" | iex
 ```
 
 
