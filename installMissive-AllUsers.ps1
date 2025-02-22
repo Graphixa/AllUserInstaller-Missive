@@ -17,6 +17,11 @@
     Run with administrative privileges
 #>
 
+param (
+    [Parameter(Mandatory = $false)]
+    [string]$InstallPath = "$env:SystemDrive\Missive"
+)
+
 Set-ExecutionPolicy Unrestricted
 $ProgressPreference = 'SilentlyContinue'
 
@@ -67,7 +72,7 @@ try {
 # Install Missive silently for all users
 try {
     Write-Host "Installing Missive for all users..."
-    $process = Start-Process -Wait -FilePath $missiveFile -ArgumentList "/S /D=$env:SystemDrive\$softwareName" -PassThru
+    $process = Start-Process -Wait -FilePath $missiveFile -ArgumentList "/S /D=$InstallPath" -PassThru
     if ($process.ExitCode -ne 0) {
         throw "Installation failed with exit code: $($process.ExitCode)"
     }
