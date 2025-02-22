@@ -12,7 +12,7 @@
 
 .NOTES
     Version: 2.0
-    Last Updated: 2024
+    Last Updated: 2025
     Requires: PowerShell 5.1 or later
     Run with administrative privileges
 #>
