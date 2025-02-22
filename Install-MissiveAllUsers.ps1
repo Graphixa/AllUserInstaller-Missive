@@ -50,7 +50,7 @@ if (Get-ChildItem $checkLocation -Recurse -ErrorAction Stop |
     Get-ItemProperty -name DisplayName -ErrorAction SilentlyContinue | 
     Where-Object {$_.DisplayName -Match "^$softwareName.*"}) {
     Write-Host -ForegroundColor Yellow "$softwareName is already installed. No action required."
-    exit
+    Return 0
 }
 
 Write-Host -ForegroundColor Yellow "$softwareName is NOT installed. Installing Now..."
@@ -66,7 +66,7 @@ try {
     Write-Host -BackgroundColor Red -ForegroundColor White " Error: Download failed "
     Write-Host $_.Exception.Message
     Remove-TempFiles
-    exit 1
+    Return 1
 }
 
 # Install Missive silently for all users
@@ -80,7 +80,7 @@ try {
     Write-Host -BackgroundColor Red -ForegroundColor White " Error: Installation failed "
     Write-Host $_.Exception.Message
     Remove-TempFiles
-    exit 1
+    Return 1
 }
 
 # Create shortcuts for all users
